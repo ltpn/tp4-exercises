@@ -27,4 +27,4 @@ This repository contains numerical exercises on open quantum systems.
 - Clone the repo via `git clone https://github.com/matteosecli/tp4-exercises.git` (preferred) or download a [zipped copy](https://github.com/matteosecli/tp4-exercises/archive/refs/heads/main.zip) and unzip it (discouraged)
 - Open Octave in the folder containing the exercises
 - Run the `.m` files
-- Note: If you prefer to work with `.ipynb` files, you have to install Octave/Jupyter first ([info](https://github.com/Calysto/octave_kernel))
+- Note: If you prefer to work with `.ipynb` files, you have to install the Octave/Jupyter integration first ([info](https://github.com/Calysto/octave_kernel))
