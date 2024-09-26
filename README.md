@@ -8,7 +8,7 @@ This repository contains numerical exercises on open quantum systems.
 
 ### MATLAB
 - [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=matteosecli/tp4-exercises) Run the `.mlx` files in MATLAB Online
-- [![Binder](https://mybinder.org/badge_logo.svg)]([https://mybinder.org/v2/gh/matteosecli/tp4-exercises/edit/main/README.md/HEAD](https://mybinder.org/v2/gh/matteosecli/jupyter-matlab/main?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmatteosecli%252Ftp4-exercises%26urlpath%3Dlab%252Ftree%252Ftp4-exercises%252F%26branch%3Dmain)) Run the `.ipynb` files in Jupyter with the MATLAB kernel on myBinder.org. Warning: it may take serveral minutes to launch the instance, plus more time to launch MATLAB the first time. You need a MathWorks account linked to a valid cloud license.
+- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matteosecli/jupyter-matlab/main?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmatteosecli%252Ftp4-exercises%26urlpath%3Dlab%252Ftree%252Ftp4-exercises%252F%26branch%3Dmain) Run the `.ipynb` files in Jupyter with the MATLAB kernel on myBinder.org. Warning: it may take serveral minutes to launch the instance, plus more time to launch MATLAB the first time. You need a MathWorks account linked to a valid cloud license.
 
 ### Octave
 - [**not implemented yet**] Run the `.ipynb` files in Jupyter with the MATLAB kernel on myBinder.org
