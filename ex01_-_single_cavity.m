@@ -98,14 +98,14 @@
 % Since fermions anticommute, the fermionic Fock states for a single site in 
 % Liouville space are defined with the following phase factor:
 % 
-% $$|1,\tilde{0}\rangle = a^{\dagger}|0,\tilde{0}\rangle,\qquad|0,\tilde{1}\rangle 
-% = \tilde{a}^{\dagger}|0,\tilde{0}\rangle,\qquad|1,\tilde{1}\rangle = \sigma 
-% a^{\dagger}\tilde{a}^{\dagger} |0,\tilde{0}\rangle.$$
+% $$|1,\tilde{0}\rangle = \sqrt{\sigma} a^{\dagger}|0,\tilde{0}\rangle,\qquad|0,\tilde{1}\rangle 
+% = \sqrt{\sigma} \tilde{a}^{\dagger}|0,\tilde{0}\rangle,\qquad|1,\tilde{1}\rangle 
+% = \sigma a^{\dagger}\tilde{a}^{\dagger} |0,\tilde{0}\rangle.$$
 % 
 % Since we are working with a single site we can employ the more convenient 
 % convention $\sigma =1$ (which is the one used in the code below). For multiple 
 % fermionic sites, it is still more convenient to employ the original $\sigma 
-% =-1$ instead.
+% =-i$ instead.
 %% Numerics
 % Let's now simulate this model numerically.
 
