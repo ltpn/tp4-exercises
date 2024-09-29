@@ -253,12 +253,12 @@ disp(['  [info] <I|N|pₛₛ> = ',num2str(I*N*pss)]);
 
 startTime = stopWatch();
 eigVals = eig(full(L));
+stopWatch(startTime,'  [info] Full spectrum obtained in ');
 magicLaTeX;
 figure;
 plot(eigVals,'Marker','*','LineStyle','none');
 curXLim = get(gca,'XLim');
 set(gca,'XLim',[curXLim(1),max(curXLim(2),0)]);
-stopWatch(startTime,'  [info] Full spectrum obtained in ');
 xlabel('$\mathrm{Re}\mathcal{L}$');
 ylabel('$\mathrm{Im}\mathcal{L}$');
 %% 
