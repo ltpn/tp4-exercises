@@ -16,7 +16,7 @@ This repository contains numerical exercises on open quantum systems.
 **Warning:**  MyBinder instances can be very slow and easily timeout.
 
 ### Julia
-- [![Binder](https://mybinder.org/badge_logo.svg)](https://ovh.mybinder.org/v2/gh/matteosecli/jupyter-matlab/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmatteosecli%252Ftp4-exercises%26urlpath%3Dlab%252Ftree%252Ftp4-exercises%252F%26branch%3Dmain) Run the `-julia.ipynb` files in Jupyter with the Julia kernel on myBinder.org.  
+- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matteosecli/jupyter-matlab/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmatteosecli%252Ftp4-exercises%26urlpath%3Dlab%252Ftree%252Ftp4-exercises%252F%26branch%3Dmain) Run the `-julia.ipynb` files in Jupyter with the Julia kernel on myBinder.org.  
 **Warning:**  MyBinder instances can be very slow and easily timeout.
 
 ## Run Online — GitHub Codespaces
