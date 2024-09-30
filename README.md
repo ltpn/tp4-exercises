@@ -21,6 +21,27 @@ This repository contains numerical exercises on open quantum systems.
 - [![Binder](https://mybinder.org/badge_logo.svg)](https://ovh.mybinder.org/v2/gh/matteosecli/jupyter-matlab/with-julia?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmatteosecli%252Ftp4-exercises%26urlpath%3Dlab%252Ftree%252Ftp4-exercises%252F%26branch%3Dmain) Run the `-julia.ipynb` files in Jupyter with the Julia kernel on myBinder.org.  
 **Warning:**  MyBinder instances can be very slow and easily timeout.
 
+## Run in Codespaces (β)
+
+You can also use GitHub Codespaces runners if you have a GitHub account. Click on the button below to open the workspace (building will take quite some time):
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/matteosecli/jupyter-matlab/tree/with-devcontainer)
+
+and clone the exercises repo:
+```
+git clone https://github.com/matteosecli/tp4-exercises.git && cd tp4-exercises
+```
+
+The Julia kernel should work with no additional setup.
+
+The Octave kernel has to be manually selected under the "Jupyter kernels" section, and has limited plotting capabilities.
+
+For optimal support for all kernels under a Jupyter Lab environment, open a terminal, run
+```
+xvfb-run jupyter lab
+```
+copy the token, click on the "Open in Browser" button that appears, and paste the token.
+
 ## Run Locally
 
 ### MATLAB
