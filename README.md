@@ -17,6 +17,10 @@ This repository contains numerical exercises on open quantum systems.
 - [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matteosecli/jupyter-matlab/main?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmatteosecli%252Ftp4-exercises%26urlpath%3Dlab%252Ftree%252Ftp4-exercises%252F%26branch%3Dmain) Run the `.ipynb` files in Jupyter with the Octave kernel on myBinder.org.  
 **Warning:**  MyBinder instances can be very slow and easily timeout.
 
+### Julia
+- [![Binder](https://mybinder.org/badge_logo.svg)](https://ovh.mybinder.org/v2/gh/matteosecli/jupyter-matlab/with-julia?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmatteosecli%252Ftp4-exercises%26urlpath%3Dlab%252Ftree%252Ftp4-exercises%252F%26branch%3Dmain) Run the `-julia.ipynb` files in Jupyter with the Julia kernel on myBinder.org.  
+**Warning:**  MyBinder instances can be very slow and easily timeout.
+
 ## Run Locally
 
 ### MATLAB
@@ -32,3 +36,6 @@ This repository contains numerical exercises on open quantum systems.
 - Open Octave in the folder containing the exercises
 - Run the `.m` files
 - Note: If you prefer to work with `.ipynb` files, you have to install the Octave/Jupyter integration first ([info](https://github.com/Calysto/octave_kernel))
+
+### Julia
+- TODO
