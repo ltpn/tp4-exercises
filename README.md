@@ -2,81 +2,55 @@
 
 This repository contains numerical exercises on open quantum systems.
 
-- **MATLAB:** use the `.mlx` files (native, preferred), the `.ipynb` files (via Jupyter), or the `.m` files (native).
-- **Octave:** use the `.ipynb` files (via Jupyter, preferred) or the `.m` files (native).
-- **Julia:** use the `-julia.ipynb` files (via Jupyter).
+- **MATLAB/Octave:** use the files in [`matlab/`](matlab).
+- **Julia:** use the files in [`julia/`](julia).
 
-## Run Online — MATLAB Online & MyBinder
+## Run Online
 
 ### MATLAB Online
 
 Click the button below to open the exercises in MATLAB Online:
 
-[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=matteosecli/tp4-exercises)
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=matteosecli/tp4-exercises&file=matlab)
 
-**Important:** you need a MathWorks account linked to a valid cloud license.
+### GitHub Codespaces
 
-### MyBinder (Jupyter)
-
-Click the button below to open the exercises in MyBinder:
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matteosecli/jupyter-matlab/binder?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fmatteosecli%252Ftp4-exercises%26urlpath%3Dlab%252Ftree%252Ftp4-exercises%252F%26branch%3Dmain)
-
-**Warning:**  MyBinder instances can be very slow and easily timeout.
-
-**MATLAB users:**
-- You need a MathWorks account linked to a valid cloud license.
-- The "Open MATLAB" button launches an interface similar to MATLAB Online, that you can use to run `.mlx` files. It could take some time to open.
-- If using the MATLAB kernel with `.ipynb` files, you may have to manually run `cd tp4-exercises` in an empty Jupyter cell before running the notebook. Launching the kernel for the first time could take some time.
-
-## Run Online — GitHub Codespaces
-
-You can also use GitHub Codespaces runners if you have a GitHub account. Click the button below to open the workspace (building will take quite some time):
+Click the button below to open the exercises in a new Codespace:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/matteosecli/tp4-exercises/tree/main)
 
-Notes:
+<details>
+<summary>Caveats</summary>
+
 - The Julia kernel should work with no additional setup.
 - The Octave kernel has to be manually selected under the "Jupyter kernels" section.
 - The MATLAB kernel works only by re-launching the codespace with the "Jupyter Lab" editor after it has been built for the first time.
 
-## Run Locally — VS Code & Jupyter Lab
+</details>
 
-The easiest way to get started locally is to develop in a ready-made container containing all the dependencies.
+## Run Locally
 
-### VS Code
-- Install VS Code (MacOS users are advised to use [Homebrew](https://formulae.brew.sh/cask/visual-studio-code)).
-- Install Docker and the Dev Containers Extension according to the [documentation](https://code.visualstudio.com/docs/devcontainers/containers#_installation).
-- Open VS Code (**important:** if you don't have an Intel/AMD processor, as for example on Macs with Apple Silicon, use `export DOCKER_DEFAULT_PLATFORM=linux/amd64 && code` to open VS Code from the command line)
-- For a quickstart, press `F1` (or `fn+F1`), look for **Dev Containers: Clone Repository in Container Volume...**, enter `matteosecli/tp4-exercises` and press `Enter` ([documentation](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume))
-- Alternatively, clone the repo via `git clone https://github.com/matteosecli/tp4-exercises.git` (preferred) or download a [zipped copy](https://github.com/matteosecli/tp4-exercises/archive/refs/heads/main.zip) and unzip it (discouraged), choose `File -> Open Folder`, and select the folder with the repo. VS Code will prompt you to **Reopen in Container**; click the button and you're all set. You can also do this directly via the command palette ([documentation](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container))
+While Codespaces are great for learning/experimenting, we advise to set up a local environment on your computer for more in-depth work.
 
-The same caveats for [GitHub Codespaces](#run-online--github-codespaces) apply.
+The steps are generally as follows.
+1. Install common prerequisites like [Git](https://github.com/git-guides/install-git), [VS Code](https://code.visualstudio.com/download), and/or [Jupyter](https://jupyter.org/install).
+2. Install the software stack related to the language you've chosen to use
+   * [MATLAB](https://ch.mathworks.com/help/install/ug/install-products-with-internet-connection.html)/[Octave](https://octave.org/download) (+ optional  [MATLAB/Jupyter](https://www.mathworks.com/products/reference-architectures/jupyter.html) or [Octave/Jupyter](https://github.com/Calysto/octave_kernel) integration)
+   * [Julia](https://julialang.org/downloads/) (+ optional [Julia/Jupyter](https://github.com/JuliaLang/IJulia.jl) integration)
+3. Clone the repo via:  
+   ```shell
+   git clone https://github.com/matteosecli/tp4-exercises.git
+   cd tp4-exercises
+   ```
+4. If using Julia, launch `julia` from the command line and install the dependencies:
+   ```julia
+   ]
+   activate .
+   instantiate
+   ```
+5. Code!
 
-### Jupyter Lab
-- Install Docker according to step 1 of the [documentation](https://code.visualstudio.com/docs/devcontainers/containers#_installation).
-- Clone the repo via `git clone https://github.com/matteosecli/tp4-exercises.git` (preferred) or download a [zipped copy](https://github.com/matteosecli/tp4-exercises/archive/refs/heads/main.zip) and unzip it (discouraged)
-- Open a terminal in the parent folder (the one containing the `tp4-exercises` folder) and run:  
-  ```
-  docker run --platform=linux/amd64 -it --rm -p 8888:8888 --mount type=bind,source=./tp4-exercises/,target=/home/jovyan/tp4-exercises quay.io/matteosecli/jupyter-matlab:main jupyter lab
-  ```
-- Copy the `http://127.0.0.1:8888/lab?token=...` link that appears and paste it into your browser (**note:** if you are a Safari user and you run into issues, please use Chrome to connect to Jupyter)
+## Tips
 
-## Run Locally — Native Installation
-
-### MATLAB
-- Install MATLAB (depending on your system)
-- Clone the repo via `git clone https://github.com/matteosecli/tp4-exercises.git` (preferred) or download a [zipped copy](https://github.com/matteosecli/tp4-exercises/archive/refs/heads/main.zip) and unzip it (discouraged)
-- Open MATLAB in the folder containing the exercises
-- Run the `.mlx` files
-- Note: If you prefer to work with `.ipynb` files, you have to install the MATLAB/Jupyter integration first ([info](https://www.mathworks.com/products/reference-architectures/jupyter.html))
-
-### Octave
-- Install Octave (depending on your system)
-- Clone the repo via `git clone https://github.com/matteosecli/tp4-exercises.git` (preferred) or download a [zipped copy](https://github.com/matteosecli/tp4-exercises/archive/refs/heads/main.zip) and unzip it (discouraged)
-- Open Octave in the folder containing the exercises
-- Run the `.m` files
-- Note: If you prefer to work with `.ipynb` files, you have to install the Octave/Jupyter integration first ([info](https://github.com/Calysto/octave_kernel))
-
-### Julia
-- TODO
+- If you don't know how to use Git, learn it; it will be worth the effort. You can get started with [this](https://nbviewer.org/github/ICESAT-2HackWeek/intro-jupyter-git/blob/master/03-Git-Tutorial.ipynb) great interactive tutorial, and/or consult GitHub's [Git Guide](https://github.com/git-guides).
+- Containers are another way to develop locally on your computer via pre-built environments that contain all the dependencies you need (spoiler: this is how we power the Codespaces). If you're interested, we have a short [guide](Container_Guide.md) on that.
