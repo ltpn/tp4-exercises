@@ -1,8 +1,8 @@
 // For format details, see https://aka.ms/vscode-remote/devcontainer.json
 {
-	"name": "jupyter-matlab",
+	"name": "tp4-exercises",
 	
-	"image": "quay.io/matteosecli/jupyter-matlab:main",
+	"image": "quay.io/matteosecli/tp4-exercises:docker",
 
 	"customizations": {
 		// Configure properties specific to VS Code.
