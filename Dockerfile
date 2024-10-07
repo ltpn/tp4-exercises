@@ -23,10 +23,12 @@ RUN python -m pip install nbgitpuller
 
 # Install Python dependencies
 RUN python -m pip install -r python/requirements.txt
+RUN rm -rf python
 
 # Copy Julia Project files to the root directory of the container
-COPY julia/Project.toml  .julia/environments/v1.10/
-COPY julia/Manifest.toml .julia/environments/v1.10/
+COPY ./julia/Project.toml  .julia/environments/v1.10/
+COPY ./julia/Manifest.toml .julia/environments/v1.10/
+RUN rm -rf julia
 
 # Install Julia kernel & precompiled packages
 ENV JULIA_NUM_THREADS=auto
