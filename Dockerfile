@@ -18,7 +18,9 @@ WORKDIR /home/${NB_USER}
 RUN python -m pip install nbgitpuller
 
 # Install Python dependencies
-RUN python -m pip install -r python/requirements.txt
+COPY python/requirements.txt /tmp/
+RUN python -m pip install -r /tmp/requirements.txt
+RUN rm /tmp/requirements.txt 
 
 # Copy Julia Project files to the root directory of the container
 COPY julia/Project.toml  .julia/environments/v1.10/
