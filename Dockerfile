@@ -20,7 +20,6 @@ RUN python -m pip install nbgitpuller
 # Install Python dependencies
 COPY python/requirements.txt /tmp/
 RUN python -m pip install -r /tmp/requirements.txt
-RUN rm /tmp/requirements.txt 
 
 # Copy Julia Project files to the root directory of the container
 COPY julia/Project.toml  .julia/environments/v1.10/
@@ -44,3 +43,8 @@ RUN set -eux; \
             ;; \
     esac; \
     source /home/${NB_USER}/.profile && julia -e 'using Pkg; Pkg.instantiate()';
+
+# Cleanup
+USER root
+RUN rm /tmp/requirements.txt
+USER $NB_USER
