@@ -2,7 +2,7 @@
 {
 	"name": "tp4-exercises",
 	
-	"image": "quay.io/matteosecli/tp4-exercises:docker",
+	"image": "ghcr.io/matteosecli/tp4-exercises:docker",
 
 	"customizations": {
 		// Configure properties specific to VS Code.
