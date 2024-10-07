@@ -1,9 +1,8 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/python
+// For format details, see https://aka.ms/devcontainer.json.
 {
 
-	"name": "Ubuntu with Python and Julia",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"name": "tp4-exercises",
+
 	"image": "ghcr.io/albertomercurio/ubuntu-python-julia:release",
 
 	// Configure tool-specific properties.

@@ -16,6 +16,6 @@ The same caveats for [GitHub Codespaces](README.md#github-codespaces) apply.
 - Clone the repo via `git clone https://github.com/matteosecli/tp4-exercises.git` (preferred) or download a [zipped copy](https://github.com/matteosecli/tp4-exercises/archive/refs/heads/main.zip) and unzip it (discouraged)
 - Open a terminal in the parent folder (the one containing the `tp4-exercises` folder) and run:  
   ```shell
-  docker run --platform=linux/amd64 -it --rm -p 8888:8888 --mount type=bind,source=./tp4-exercises/,target=/home/jovyan/tp4-exercises quay.io/matteosecli/jupyter-matlab:main jupyter lab
+  docker run --platform=linux/amd64 -it --rm -p 8888:8888 --mount type=bind,source=./tp4-exercises/,target=/home/jovyan/tp4-exercises ghcr.io/albertomercurio/ubuntu-python-julia:release jupyter lab
   ```
 - Copy the `http://127.0.0.1:8888/lab?token=...` link that appears and paste it into your browser (**note:** if you are a Safari user and you run into issues, please use Chrome to connect to Jupyter).

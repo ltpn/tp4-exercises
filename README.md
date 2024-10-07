@@ -2,7 +2,7 @@
 
 This repository contains numerical exercises on open quantum systems.
 
-- **MATLAB/Octave:** use the files in [`matlab/`](matlab).
+- **MATLAB:** use the files in [`matlab/`](matlab).
 - **Julia:** use the files in [`julia/`](julia).
 
 ## Run Online
@@ -24,7 +24,6 @@ Click the button below to open the exercises in a new Codespace:
 
 - The Julia kernel should work with no additional setup.
 - The Octave kernel has to be manually selected under the "Jupyter kernels" section.
-- The MATLAB kernel works only by re-launching the codespace with the "Jupyter Lab" editor after it has been built for the first time.
 
 </details>
 
@@ -35,7 +34,7 @@ While Codespaces are great for learning/experimenting, we advise to set up a loc
 The steps are generally as follows.
 1. Install common prerequisites like [Git](https://github.com/git-guides/install-git), [VS Code](https://code.visualstudio.com/download), and/or [Jupyter](https://jupyter.org/install).
 2. Install the software stack related to the language you've chosen to use
-   * [MATLAB](https://ch.mathworks.com/help/install/ug/install-products-with-internet-connection.html)/[Octave](https://octave.org/download) (+ optional  [MATLAB/Jupyter](https://www.mathworks.com/products/reference-architectures/jupyter.html) or [Octave/Jupyter](https://github.com/Calysto/octave_kernel) integration)
+   * [MATLAB](https://ch.mathworks.com/help/install/ug/install-products-with-internet-connection.html) (+ optional  [MATLAB/Jupyter](https://www.mathworks.com/products/reference-architectures/jupyter.html) integration)
    * [Julia](https://julialang.org/downloads/) (+ optional [Julia/Jupyter](https://github.com/JuliaLang/IJulia.jl) integration)
 3. Clone the repo via:  
    ```shell
