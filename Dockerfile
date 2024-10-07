@@ -14,21 +14,15 @@ RUN export DEBIAN_FRONTEND=noninteractive && apt-get update \
 USER $NB_USER
 WORKDIR /home/${NB_USER}
 
-# Copy configuration files from the main branch
-RUN git fetch
-RUN git checkout main -- julia/Project.toml julia/Manifest.toml python/requirements.txt
-
 # Install nbgitpuller
 RUN python -m pip install nbgitpuller
 
 # Install Python dependencies
 RUN python -m pip install -r python/requirements.txt
-RUN rm -rf python
 
 # Copy Julia Project files to the root directory of the container
-RUN cp julia/Project.toml  .julia/environments/v1.10/
-RUN cp julia/Manifest.toml .julia/environments/v1.10/
-RUN rm -rf julia
+COPY julia/Project.toml  .julia/environments/v1.10/
+COPY julia/Manifest.toml .julia/environments/v1.10/
 
 # Install Julia kernel & precompiled packages
 ENV JULIA_NUM_THREADS=auto
