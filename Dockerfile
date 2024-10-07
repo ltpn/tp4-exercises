@@ -31,8 +31,9 @@ RUN echo '#!/usr/bin/env bash' > /usr/bin/octave-x && \
 USER $NB_USER
 WORKDIR /home/${NB_USER}
 
-# Install nbgitpuller
-RUN python -m pip install nbgitpuller octave_kernel
+# Install nbgitpuller & python packages
+RUN python -m pip install nbgitpuller octave_kernel \
+    numpy scipy qutip matplotlib setuptools
 
 # Install Octave extensions
 RUN octave-cli --eval 'pkg install -forge tablicious'
@@ -56,4 +57,4 @@ RUN set -eux; \
 			exit 1; \
 			;; \
 	esac; \
-    source /home/${NB_USER}/.profile && julia -e 'using Pkg; Pkg.add(["IJulia","LinearAlgebra","SparseArrays","Arpack","DifferentialEquations","Plots","KrylovKit","BenchmarkTools","CairoMakie","QuantumToolbox"]); using IJulia';
+    source /home/${NB_USER}/.profile && julia -e 'using Pkg; Pkg.add(["IJulia","LinearAlgebra","SparseArrays","Arpack","DifferentialEquations","OrdinaryDiffEq","StochasticDiffEq","Plots","KrylovKit","BenchmarkTools","CairoMakie","QuantumToolbox"]); using IJulia';
