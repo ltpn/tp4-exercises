@@ -3,7 +3,7 @@
 
 	"name": "tp4-exercises",
 
-	"image": "ghcr.io/albertomercurio/ubuntu-python-julia:release",
+	"image": "ghcr.io/matteosecli/tp4-exercises:docker",
 
 	// Configure tool-specific properties.
 	"customizations": {
