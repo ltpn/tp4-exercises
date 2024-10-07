@@ -22,8 +22,8 @@ COPY python/requirements.txt /tmp/
 RUN python -m pip install -r /tmp/requirements.txt
 
 # Copy Julia Project files to the root directory of the container
-COPY julia/Project.toml  .julia/environments/v1.10/
-COPY julia/Manifest.toml .julia/environments/v1.10/
+COPY julia/Project.toml  /opt/julia/environments/v1.10/
+COPY julia/Manifest.toml /opt/julia/environments/v1.10/
 
 # Install Julia kernel & precompiled packages
 ENV JULIA_NUM_THREADS=auto
