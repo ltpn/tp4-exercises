@@ -19,8 +19,12 @@ on:
 env:
   # Use docker.io for Docker Hub if empty
   # Use ghcr.io for GitHub
-  REGISTRY: quay.io
-  # USERNAME: ${{ github.actor }}
+  # Use quay.io for Quay
+  REGISTRY: ghcr.io
+  USERNAME: ${{ github.actor }}
+  PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+  # USERNAME: ${{ secrets.QUAY_USERNAME }}
+  # PASSWORD: ${{ secrets.QUAY_TOKEN }}
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
 
@@ -61,8 +65,8 @@ jobs:
         uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ secrets.QUAY_USERNAME }}
-          password: ${{ secrets.QUAY_TOKEN }}
+          username: ${{ env.USERNAME }}
+          password: ${{ env.PASSWORD }}
 
       # Extract metadata (tags, labels) for Docker
       # https://github.com/docker/metadata-action
