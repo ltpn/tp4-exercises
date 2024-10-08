@@ -17,15 +17,7 @@ Click the button below to open the exercises in MATLAB Online:
 
 Click the button below to open the exercises in a new Codespace:
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/matteosecli/tp4-exercises/tree/main)
-
-<details>
-<summary>Caveats</summary>
-
-- The Julia kernel should work with no additional setup.
-- The Octave kernel has to be manually selected under the "Jupyter kernels" section.
-
-</details>
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/matteosecli/tp4-exercises/tree/main?quickstart=1)
 
 ## Run Locally
 
@@ -41,7 +33,7 @@ The steps are generally as follows.
    git clone https://github.com/matteosecli/tp4-exercises.git
    cd tp4-exercises
    ```
-4. If using Julia, launch `julia` from the command line and install the dependencies:
+4. If using Julia, launch `julia` from the command line in the `julia` folder and install the dependencies:
    ```julia
    ]
    activate .
