@@ -7,19 +7,18 @@ ENV DEBIAN_FRONTEND="noninteractive" TZ="UTC"
 # Install supporting system packages
 RUN export DEBIAN_FRONTEND=noninteractive && apt-get update \
     && apt-get install -y software-properties-common \
-    wget unzip ca-certificates git make xvfb \
-    ffmpeg python3-pip
+    wget unzip ca-certificates git make xvfb ffmpeg
 
 # Switch to notebook user
 USER $NB_USER
 WORKDIR /home/${NB_USER}
 
 # Install nbgitpuller
-RUN python -m pip install nbgitpuller
+RUN mamba install --yes nbgitpuller
 
 # Install Python dependencies
 COPY python/requirements.txt /tmp/
-RUN python -m pip install -r /tmp/requirements.txt
+RUN mamba install --yes --file /tmp/requirements.txt
 
 # Copy Julia Project files to the root directory of the container
 COPY julia/Project.toml  /opt/julia/environments/v1.10/
