@@ -11,13 +11,13 @@ This repository contains numerical exercises on open quantum systems.
 
 Click the button below to open the exercises in MATLAB Online:
 
-[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=matteosecli/tp4-exercises&file=matlab)
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=ltpn/tp4-exercises&file=matlab)
 
 ### GitHub Codespaces
 
 Click the button below to open the exercises in a new Codespace:
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/matteosecli/tp4-exercises/tree/main?quickstart=1)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ltpn/tp4-exercises/tree/main?quickstart=1)
 
 ## Run Locally
 
@@ -30,7 +30,7 @@ The steps are generally as follows.
    * [Julia](https://julialang.org/downloads/) (+ optional [Julia/Jupyter](https://github.com/JuliaLang/IJulia.jl) integration)
 3. Clone the repo via:  
    ```shell
-   git clone https://github.com/matteosecli/tp4-exercises.git
+   git clone https://github.com/ltpn/tp4-exercises.git
    cd tp4-exercises
    ```
 4. If using Julia, launch `julia` from the command line in the `julia` folder and install the dependencies:
