@@ -1,4 +1,4 @@
-FROM quay.io/jupyter/julia-notebook:julia-1.10.5
+FROM quay.io/jupyter/julia-notebook:julia-1.11.1
 
 # Switch to root user
 USER root
@@ -21,8 +21,8 @@ COPY python/requirements.txt /tmp/
 RUN mamba install --yes --file /tmp/requirements.txt
 
 # Copy Julia Project files to the root directory of the container
-COPY julia/Project.toml  /opt/julia/environments/v1.10/
-COPY julia/Manifest.toml /opt/julia/environments/v1.10/
+COPY julia/Project.toml  /opt/julia/environments/v1.11/
+COPY julia/Manifest.toml /opt/julia/environments/v1.11/
 
 # Install Julia kernel & precompiled packages
 ENV JULIA_NUM_THREADS=auto
